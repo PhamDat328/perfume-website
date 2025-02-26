@@ -1,0 +1,10 @@
+const ENV = {
+  API_URL: process.env.NEXT_PUBLIC_API_URL,
+  ACCESS_TOKEN_KEY: process.env.NEXT_PUBLIC_ACCESS_TOKEN_KEY ?? '',
+  JWT_SECRET: process.env.NEXT_PUBLIC_JWT_SECRET,
+  GOOGLE_CAPTCHA_SITE_KEY:
+    process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITE_KEY ?? '',
+  CRYPTO_JS_SECRET: process.env.NEXT_PUBLIC_CRYPTO_JS_SECRET ?? '',
+};
+
+export default ENV;
