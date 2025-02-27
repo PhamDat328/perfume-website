@@ -1,5 +1,8 @@
+import { ReactQueryProvider } from '@/providers';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 import './globals.css';
 
 const geistSans = Geist({
@@ -27,7 +30,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
+        <ReactQueryDevtools initialIsOpen={false} buttonPosition="top-left" />
+        <Toaster
+          containerStyle={{ zIndex: 99999 }}
+          toastOptions={{
+            style: {
+              maxWidth: '500px',
+            },
+          }}
+        />
       </body>
     </html>
   );

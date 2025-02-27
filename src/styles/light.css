@@ -1,0 +1,9 @@
+html[data-theme='light'] {
+  --color-primary: #0a685a;
+  --color-secondary: #23ab85;
+  --color-accent: #f7fffd;
+  --color-background: #fff;
+  --color-typography: #091316;
+  --color-typography-secondary: #616161;
+  --color-danger: #b90404;
+}
